@@ -1,0 +1,184 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block content %}
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option spad set-bg" data-setbg="{% static 'img/breadcrumb-bg.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>¿Quién Soy?</h2>
+                    <div class="breadcrumb__links">
+                        <a href="{% url 'home' %}">Inicio</a>
+                        <span>¿Quién soy?</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- About Section Begin -->
+<section class="about spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about__pic">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="about__pic__item about__pic__item--large set-bg"
+                                data-setbg="{% static 'img/about/about-1.jpg' %}"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="about__pic__item set-bg" data-setbg="{% static 'img/about/about-2.jpg' %}"></div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="about__pic__item set-bg" data-setbg="{% static 'img/about/about-3.jpg' %}"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about__text">
+                    <div class="section-title">
+                        <span>Acerca de Mí</span>
+                        <h2>¿Quién soy?</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="{% static 'img/icons/si-3.png' %}" alt="">
+                                </div>
+                                <h4>Creador de contenido y editor de videos</h4>
+                                <p>Transformo ideas en contenido visual cautivador, llevando la edición de video al siguiente nivel para contar historias que impactan.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="{% static 'img/icons/si-4.png' %}" alt="">
+                                </div>
+                                <h4>Marketing Digital</h4>
+                                <p>Impulso tu marca en el entorno digital, diseñando estrategias efectivas que conectan con tu audiencia y generan resultados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__text__desc">
+                        <p>Formada en 2006 por Matt Hobbs y Cael Jones, Videoprah es una empresa de producción galardonada, 
+                           especializada en servicios de producción de video para comerciales, transmisiones, turismo y deportes de acción, 
+                           que ha sido destacada en varias ocasiones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+
+<!-- Testimonial Section Begin -->
+<section class="testimonial spad set-bg" data-setbg="{% static 'img/testimonial-bg.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title center-title">
+                    <span>Clientes</span>
+                    <h2>¿Que opinan mis clientes?</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="testimonial__slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Ofrece un servicio tan excelente que puede beneficiar a todo tipo de personas de cualquier industria.</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'img/testimonial/ta-1.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Krista Attorn</h5>
+                                <span>Diseñadora Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>El videógrafo ofrece un servicio tan excelente que puede beneficiar a todo tipo de personas de cualquier sector.</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'img/testimonial/ta-2.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Krista Attorn</h5>
+                                <span>Diseñadora Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>El videógrafo ofrece un servicio tan excelente que puede beneficiar a todo tipo de personas de cualquier sector.</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'img/testimonial/ta-3.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Krista Attorn</h5>
+                                <span>Diseñadora Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Ofrece un servicio tan excelente que puede beneficiar a todo tipo de personas de cualquier industria.</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'img/testimonial/ta-1.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Krista Attorn</h5>
+                                <span>Diseñadora Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>El videógrafo ofrece un servicio tan excelente que puede beneficiar a todo tipo de personas de cualquier sector.</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'img/testimonial/ta-2.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Krista Attorn</h5>
+                                <span>Diseñadora Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+{% endblock content %}
+
+{% block counter %} {% endblock counter %}

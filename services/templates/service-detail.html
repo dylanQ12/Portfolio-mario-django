@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block service_detail %}
+<!-- Hero Begin -->
+<section class="blog-hero spad set-bg" data-setbg="{% static 'img/blog/blog-hero.jpg' %}">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+                <div class="blog__hero__text">
+                    <h2>Guionismo y Edición</h2>
+                    <ul>
+                        <li>por <span>Mario Quintanilla</span></li>
+                        <li>Agosto 31, 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero End -->
+
+<!-- Service Details Section Begin -->
+<div class="blog-details spad"  style="padding-bottom: 20px;">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+                <div class="blog__details__content">
+                    <div class="blog__details__desc">
+                        <h4 class="text-white text-center">Guionismo y Edición</h4>
+                        <p class="text-white">
+                            <br> <b>Autor:</b> Mario Quintanilla. 
+                            <br> <b>Fecha de creación:</b> 31-8-2024 11:56
+                        </p>
+                        <p class="text-white mb-3">
+                            <b>Descripción:</b> Cada gran video comienza con una historia bien contada. 
+                            En nuestra sección de Guionismo y Edición, transformamos conceptos en narrativas cautivadoras, 
+                            dando vida a tus ideas a través de un proceso meticuloso de creación y edición. 
+                            Nos aseguramos de que cada palabra y cada imagen resuene con tu audiencia, 
+                            convirtiendo tus proyectos en experiencias visuales memorables. 
+                            Con el auge del consumo de video en plataformas digitales, tener un contenido que no solo informe, 
+                            sino que también emocione, es clave para destacarse. 
+                            Aquí, no solo creamos videos creamos conexiones.
+                        </p>
+                        <img src="{% static 'img/services/service-1.jpg' %}" alt="" style="max-width: 100%; height: auto;">
+                        <p class="text-white">
+                            <br> <b>Última Actualización:</b> 31-8-2024 15:08
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service Details Section End -->
+{% endblock service_detail %}
+
+{% block counter %} {% endblock counter %}
