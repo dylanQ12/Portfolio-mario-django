@@ -1,0 +1,37 @@
+<div class="contact__form">
+    <h3>Ponte en Contacto</h3>
+    <form id="FormHandler" action="{% url 'enviar-mensaje' %}" method="post">
+        {% csrf_token %}
+        <input 
+          type="text" 
+          name="nombre" 
+          placeholder="Nombre" 
+          required
+        >
+        
+        <input 
+          type="text" 
+          name="apellido" 
+          placeholder="Apellido" 
+        >
+        
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Email" 
+          required
+        >
+        
+        <textarea
+          name="mensaje" 
+          placeholder="Mensaje" 
+          required
+        ></textarea>
+        
+        <button 
+          type="submit" 
+          class="site-btn">
+          Enviar
+        </button>
+    </form>
+</div>

@@ -10,4 +10,4 @@ class Contact(models.Model):
     fecha_envio = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido}"
+        return f"{self.nombre} {self.apellido} - Enviado: {self.fecha_envio} - Mensaje: {self.mensaje}"

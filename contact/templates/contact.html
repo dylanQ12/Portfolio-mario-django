@@ -1,6 +1,11 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} 
+{% load static %}
 
-{% block content %} 
+{% block css_link %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+{% endblock css_link %}
+
+{% block content %}
 <!-- Breadcrumb Begin -->
 <div class="breadcrumb-option spad set-bg" data-setbg="{% static 'img/breadcrumb-bg.jpg' %}">
     <div class="container">
@@ -23,7 +28,7 @@
 <section class="contact-widget spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+            <div class="col-lg-4 col-md-6">
                 <div class="contact__widget__item">
                     <div class="contact__widget__item__icon">
                         <i class="fa fa-map-marker"></i>
@@ -34,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+            <div class="col-lg-4 col-md-6">
                 <div class="contact__widget__item">
                     <div class="contact__widget__item__icon">
                         <i class="fa fa-phone"></i>
@@ -45,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+            <div class="col-lg-4 col-md-6">
                 <div class="contact__widget__item">
                     <div class="contact__widget__item__icon">
                         <i class="fa fa-envelope"></i>
@@ -79,12 +84,63 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
-                {% include 'form-contact.html' %}
+                <!-- Include Form Contact -->
+                {% include 'form/form-contact.html' %}
             </div>
         </div>
     </div>
 </section>
 <!-- Call To Action Section End -->
 {% endblock content %}
+
+{% block src_js %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('FormHandler');
+        
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); 
+      
+          const formData = new FormData(form);
+          fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'X-Requested-With': 'XMLHttpRequest'
+            },
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            if (data.success) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Éxito',
+                text: '¡Mensaje enviado satisfactoriamente!',
+              }).then(() => {
+                form.reset();  // Restablece el formulario
+                if (data.redirect_url) {
+                  window.location.href = data.redirect_url;
+                }
+              });
+            } else {
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Hubo un problema al enviar el formulario.',
+              });
+            }
+          })
+          .catch(error => console.error('Error:', error));
+        });
+      });
+</script>
+{% endblock src_js %}
 
 {% block counter %} {% endblock counter %}

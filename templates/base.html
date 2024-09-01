@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     {% endblock styles_css %}
+
+    {% block css_link %} {% endblock css_link %}
 </head>
 {% endblock header %}
 
@@ -343,6 +345,8 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     {% endblock scripts_js %}
+
+    {% block src_js %} {% endblock src_js %}
 </body>
 
 </html>

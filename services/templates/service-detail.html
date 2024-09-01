@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} 
+{% load static %}
 
 {% block service_detail %}
 <!-- Hero Begin -->
@@ -7,10 +8,10 @@
         <div class="row d-flex justify-content-center">
             <div class="col-lg-8">
                 <div class="blog__hero__text">
-                    <h2>Guionismo y Edición</h2>
+                    <h2>{{ service.titulo }}</h2>
                     <ul>
-                        <li>por <span>Mario Quintanilla</span></li>
-                        <li>Agosto 31, 2024</li>
+                        <li>por <span>{{ service.usuario.first_name }}</span></li>
+                        <li>{{ service.fecha_creacion|date:"F d, Y" }}</li>
                     </ul>
                 </div>
             </div>
@@ -20,30 +21,23 @@
 <!-- Hero End -->
 
 <!-- Service Details Section Begin -->
-<div class="blog-details spad"  style="padding-bottom: 20px;">
+<div class="blog-details spad" style="padding-bottom: 20px;">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-lg-8">
                 <div class="blog__details__content">
                     <div class="blog__details__desc">
-                        <h4 class="text-white text-center">Guionismo y Edición</h4>
+                        <h4 class="text-white text-center">{{ service.titulo }}</h4>
                         <p class="text-white">
-                            <br> <b>Autor:</b> Mario Quintanilla. 
-                            <br> <b>Fecha de creación:</b> 31-8-2024 11:56
+                            <br> <b>Autor:</b> {{ service.usuario.first_name }} {{ service.usuario.last_name }} 
+                            <br> <b>Fecha de creación:</b> {{ service.fecha_creacion|date:"d-m-Y H:i" }}
                         </p>
                         <p class="text-white mb-3">
-                            <b>Descripción:</b> Cada gran video comienza con una historia bien contada. 
-                            En nuestra sección de Guionismo y Edición, transformamos conceptos en narrativas cautivadoras, 
-                            dando vida a tus ideas a través de un proceso meticuloso de creación y edición. 
-                            Nos aseguramos de que cada palabra y cada imagen resuene con tu audiencia, 
-                            convirtiendo tus proyectos en experiencias visuales memorables. 
-                            Con el auge del consumo de video en plataformas digitales, tener un contenido que no solo informe, 
-                            sino que también emocione, es clave para destacarse. 
-                            Aquí, no solo creamos videos creamos conexiones.
+                            <b>Descripción:</b> {{ service.descripcion }}
                         </p>
-                        <img src="{% static 'img/services/service-1.jpg' %}" alt="" style="max-width: 100%; height: auto;">
+                        <img src="{{ service.foto.url }}" alt="{{ service.titulo }}" style="max-width: 100%; height: auto;">
                         <p class="text-white">
-                            <br> <b>Última Actualización:</b> 31-8-2024 15:08
+                            <br> <b>Última Actualización:</b> {{ service.fecha_modificacion|date:"d-m-Y H:i" }}
                         </p>
                     </div>
                 </div>

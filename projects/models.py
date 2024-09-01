@@ -7,14 +7,14 @@ import os
 class Project(models.Model):
     foto = models.ImageField(upload_to="img_projects/")
     titulo = models.CharField(max_length=200)
-    descripcion = models.TextField()
+    descripcion = models.CharField(max_length=200)
     url_video = models.URLField()
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_modificacion = models.DateTimeField(auto_now=True)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.titulo
+        return f"{self.titulo} - {self.descripcion}"
 
     def save(self, *args, **kwargs):
         if self.pk:  # Si el objeto ya existe, es una actualización
