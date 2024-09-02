@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from .models import Service
-
+from django.utils import timezone
 
 # Create your views here.
 def servicesView(request):
@@ -22,6 +22,7 @@ def serviceDetailView(request, pk):
     service = get_object_or_404(Service, pk=pk)
     context = {
         "title": f"{service.titulo}",
+        "fecha_actual": timezone.now(),
         "service": service,
     }
     return render(request, "service-detail.html", context)

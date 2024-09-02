@@ -11,7 +11,8 @@
                     <h2>{{ service.titulo }}</h2>
                     <ul>
                         <li>por <span>{{ service.usuario.first_name }}</span></li>
-                        <li>{{ service.fecha_creacion|date:"F d, Y" }}</li>
+                        {% load l10n %}
+                        <li>{{ fecha_actual|date:"l, d" }} de {{ fecha_actual|date:"F" }} del {{ fecha_actual|date:"Y" }}</li>
                     </ul>
                 </div>
             </div>

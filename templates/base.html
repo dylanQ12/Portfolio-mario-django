@@ -102,55 +102,6 @@
     <!-- Content main page -->
     {% block content %}{% endblock content %}
 
-    {% block counter %}
-    <!-- Counter Section Begin -->
-    <section class="counter">
-        <div class="container">
-            <div class="counter__content">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item">
-                            <div class="counter__item__text">
-                                <img src="{% static 'img/icons/ci-1.png' %}" alt="">
-                                <h2 class="counter_num">230</h2>
-                                <p>Proyectos completados</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item second__item">
-                            <div class="counter__item__text">
-                                <img src="{% static 'img/icons/ci-2.png' %}" alt="">
-                                <h2 class="counter_num">1068</h2>
-                                <p>Clientes felices</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item third__item">
-                            <div class="counter__item__text">
-                                <img src="{% static 'img/icons/ci-3.png' %}" alt="">
-                                <h2 class="counter_num">230</h2>
-                                <p>Clientes potenciales</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item four__item">
-                            <div class="counter__item__text">
-                                <img src="{% static 'img/icons/ci-4.png' %}" alt="">
-                                <h2 class="counter_num">230</h2>
-                                <p>Servicios de calidad</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Counter Section End -->
-    {% endblock counter %}
-
     {% block team %}
     <!-- Team Section Begin -->
     <!--<section class="team spad set-bg" data-setbg="{% static 'img/team-bg.jpg' %}">
@@ -227,9 +178,58 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- Team Section End -->
     {% endblock team %}
+
+    {% block counter %}
+    <!-- Counter Section Begin -->
+    <section class="counter">
+        <div class="container">
+            <div class="counter__content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item__text">
+                                <img src="{% static 'img/icons/ci-1.png' %}" alt="">
+                                <h2 class="counter_num">230</h2>
+                                <p>Proyectos completados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item second__item">
+                            <div class="counter__item__text">
+                                <img src="{% static 'img/icons/ci-2.png' %}" alt="">
+                                <h2 class="counter_num">1068</h2>
+                                <p>Clientes felices</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item third__item">
+                            <div class="counter__item__text">
+                                <img src="{% static 'img/icons/ci-3.png' %}" alt="">
+                                <h2 class="counter_num">230</h2>
+                                <p>Clientes potenciales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item four__item">
+                            <div class="counter__item__text">
+                                <img src="{% static 'img/icons/ci-4.png' %}" alt="">
+                                <h2 class="counter_num">230</h2>
+                                <p>Servicios de calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counter Section End -->
+    {% endblock counter %}
 
     {% block stories %}
     <!-- Call To Action Section Begin -->
