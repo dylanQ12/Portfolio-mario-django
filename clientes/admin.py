@@ -5,6 +5,7 @@ from .models import Client
 # Configuración para el modelo Client
 class ClientAdmin(admin.ModelAdmin):
     list_display = (
+        "foto",
         "nombre",
         "apellido",
         "profesion",

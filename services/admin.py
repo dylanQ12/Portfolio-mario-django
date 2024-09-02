@@ -5,6 +5,7 @@ from .models import Service
 # Configuración para el modelo Service
 class ServiceAdmin(admin.ModelAdmin):
     list_display = (
+        "foto",
         "titulo",
         "fecha_creacion",
         "fecha_modificacion",

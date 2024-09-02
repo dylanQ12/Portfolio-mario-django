@@ -5,6 +5,7 @@ from .models import Project
 # Configuración para el modelo Project
 class ProjectAdmin(admin.ModelAdmin):
     list_display = (
+        "foto",
         "titulo",
         "descripcion",
         "fecha_creacion",
