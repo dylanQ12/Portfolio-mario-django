@@ -5,9 +5,8 @@ from .models import Project
 # Configuración para el modelo Project
 class ProjectAdmin(admin.ModelAdmin):
     list_display = (
-        "foto",
+        "id",
         "titulo",
-        "descripcion",
         "fecha_creacion",
         "is_wide",
         "is_large",
@@ -19,6 +18,11 @@ class ProjectAdmin(admin.ModelAdmin):
         "usuario",
         "fecha_creacion",
     )  # Filtros a mostrar en la barra lateral
+    list_editable = (
+        "titulo",
+        "is_wide",
+        "is_large",
+    )
     search_fields = ("titulo", "descripcion")  # Campos para buscar
     date_hierarchy = "fecha_creacion"  # Navegación por fecha
 
