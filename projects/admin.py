@@ -8,8 +8,6 @@ class ProjectAdmin(admin.ModelAdmin):
         "id",
         "titulo",
         "fecha_creacion",
-        "is_wide",
-        "is_large",
         "usuario",
     )  # Campos a mostrar en la tabla
     list_filter = (
@@ -20,8 +18,6 @@ class ProjectAdmin(admin.ModelAdmin):
     )  # Filtros a mostrar en la barra lateral
     list_editable = (
         "titulo",
-        "is_wide",
-        "is_large",
     )
     search_fields = ("titulo", "descripcion")  # Campos para buscar
     date_hierarchy = "fecha_creacion"  # Navegación por fecha

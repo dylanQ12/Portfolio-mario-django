@@ -9,6 +9,7 @@ class ContactAdmin(admin.ModelAdmin):
         "apellido",
         "email",
         "fecha_envio",
+        "mensaje",
     )  # Campos a mostrar en la tabla
     list_editable = (
         "nombre",
