@@ -143,69 +143,28 @@
         </div>
     </div>
 </section>
-<!-- Services Section End -->
+<!-- Services Section Begin -->
 {% endblock services %}
 
-{% block work %}
 <!-- Work Section Begin -->
 <section class="work">
     <div class="work__gallery">
         <div class="grid-sizer"></div>
-        <div class="work__item wide__item set-bg" data-setbg="{% static 'img/work/work-1.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
+        {% for project in projects %}
+        <div class="work__item {% if project.is_wide %}wide__item{% elif project.is_large %}large__item{% else %}small__item{% endif %} set-bg" data-setbg="{{ project.foto.url }}">
+            <a href="{{ project.url_video }}" class="play-btn video-popup"><i class="fa fa-play"></i></a>
             <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
+                <h4>{{ project.titulo }}</h4>
                 <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
+                    <li>{{ project.descripcion }}</li>
+                    <!-- Puedes añadir más detalles según necesites -->
                 </ul>
             </div>
         </div>
-        <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-2.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-3.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item large__item set-bg" data-setbg="{% static 'img/work/work-4.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-5.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-6.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item wide__item set-bg" data-setbg="{% static 'img/work/work-7.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
-
 <!-- Work Section End -->
-{% endblock work %}
-
 
 <!-- Blog Section Begin -->
 {% block blog %}
@@ -313,3 +272,4 @@
 {% endblock blog %}
 
 {% endblock content %}
+

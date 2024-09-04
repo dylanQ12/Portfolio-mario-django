@@ -17,9 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-    {% block styles_css %}
     <!-- Css Styles -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
@@ -28,9 +25,7 @@
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-    {% endblock styles_css %}
-
-    {% block css_link %} {% endblock css_link %}
+    {% block css_files %} {% endblock css_files %}
 </head>
 {% endblock header %}
 
@@ -343,7 +338,6 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    {% block scripts_js %}
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
@@ -352,8 +346,6 @@
     <script src="{% static 'js/jquery.slicknav.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-    {% endblock scripts_js %}
-
     {% block src_js %} {% endblock src_js %}
 </body>
 
